@@ -18,4 +18,7 @@ public class ProviderReview {
 	private Float cost;
 
 	private String review;
+
+	@OneToOne(fetch = FetchType.LAZY)
+	private User reviewer;
 }
