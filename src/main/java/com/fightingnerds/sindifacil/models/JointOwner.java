@@ -7,12 +7,18 @@ import java.util.List;
 @Entity
 public class JointOwner {
 	@Id
-	private Long id;
+	@Column(name = "joint_owner_id")
+	private String id;
 
+	@MapsId
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "joint_owner_id", nullable = false)
-	private User joinOwner;
+	private User jointOwner;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(
+		mappedBy = "jointOwner",
+		cascade = CascadeType.ALL,
+		orphanRemoval = true
+	)
 	private List<Property> properties;
 }

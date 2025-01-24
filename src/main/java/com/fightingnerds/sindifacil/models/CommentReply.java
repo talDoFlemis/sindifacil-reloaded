@@ -1,21 +1,18 @@
 package com.fightingnerds.sindifacil.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class CommentReply {
-	// TODO: change this to use same comment id
 	@Id
-	private Long id;
+	@Column(name = "comment_id")
+	private Long commentId;
 
-	@OneToOne
-	@JoinColumn(name = "comment_id")
+	@MapsId
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "comment_id", nullable = false)
 	private Comment comment;
 
-	@OneToOne
-	@JoinColumn(name = "comment_replied_id")
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Comment commentReplied;
 }

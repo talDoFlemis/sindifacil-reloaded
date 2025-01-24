@@ -5,10 +5,11 @@ import jakarta.persistence.*;
 @Entity
 public class SindifacilManager {
 	@Id
-	@Column(name = "cpf")
-	private Long cpf;
+	@Column(name = "user_id")
+	private String id;
 
+	@MapsId
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "cpf")
+	@JoinColumn(name = "user_id")
 	private User user;
 }

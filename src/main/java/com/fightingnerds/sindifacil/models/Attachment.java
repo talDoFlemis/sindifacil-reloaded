@@ -1,18 +1,28 @@
 package com.fightingnerds.sindifacil.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import org.springframework.util.MimeType;
+import jakarta.persistence.*;
+
+import java.util.Date;
 
 @Entity
-public class Attachment {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Attachment {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private String key;
 
-	private String name;
+	@Column(name = "file_name")
+	private String fileName;
 
-	private MimeType mimeType;
+	@Column(name = "mime_type")
+	private String mimeType;
+
+	@Column(name = "byte_size")
+	private Long byteSize;
+
+	@Column(name = "created_at", columnDefinition = "timestamp with time zone not null")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date createdAt;
+
+	@Column(name = "checksum")
+	private String checksum;
 }

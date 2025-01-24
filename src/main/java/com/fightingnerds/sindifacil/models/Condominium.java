@@ -13,12 +13,15 @@ public class Condominium {
 
 	private String name;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL,
+		orphanRemoval = true,
+		mappedBy = "condominium"
+	)
 	private List<Property> properties;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "cpf")
-	private Sindico sindico;
+	private Syndic syndic;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "address_id", nullable = false)

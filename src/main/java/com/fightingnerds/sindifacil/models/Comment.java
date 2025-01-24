@@ -16,11 +16,19 @@ public class Comment {
 
 	private String richText;
 
-	@OneToMany
-	private List<Attachment> attachments;
+	@OneToMany(
+		mappedBy = "comment",
+		cascade = CascadeType.ALL,
+		orphanRemoval = true
+	)
+	private List<CommentAttachment> attachments;
 
-	private Long likes;
+	private Long likeAmount;
 
-	@OneToMany
+	@OneToMany(
+		mappedBy = "repliedComment",
+		cascade = CascadeType.ALL,
+		orphanRemoval = true
+	)
 	private List<CommentReply> replies;
 }

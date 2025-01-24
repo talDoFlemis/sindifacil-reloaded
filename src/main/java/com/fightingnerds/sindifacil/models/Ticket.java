@@ -27,6 +27,10 @@ public class Ticket {
 
 	private TicketStatus status;
 
-	@OneToMany
-	private List<Attachment> attachments;
+	@OneToMany(
+		mappedBy = "ticket_id",
+		cascade = CascadeType.ALL,
+		orphanRemoval = true
+	)
+	private List<TicketAttachment> attachments;
 }
