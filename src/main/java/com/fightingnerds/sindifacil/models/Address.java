@@ -1,10 +1,8 @@
 package com.fightingnerds.sindifacil.models;
 
 import jakarta.persistence.*;
-import lombok.Builder;
 
 @Entity
-@Builder
 public class Address {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
