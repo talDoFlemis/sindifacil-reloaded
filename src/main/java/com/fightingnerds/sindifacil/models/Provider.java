@@ -10,6 +10,7 @@ public class Provider extends DateAudit {
 
 	@MapsId
 	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "provider_id")
 	private User user;
 
 	@OneToOne(cascade = CascadeType.ALL)

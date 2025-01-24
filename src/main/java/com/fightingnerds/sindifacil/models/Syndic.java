@@ -3,7 +3,7 @@ package com.fightingnerds.sindifacil.models;
 import jakarta.persistence.*;
 
 @Entity
-public class Syndic {
+public class Syndic extends DateAudit {
 	@Id
 	@Column(name = "syndic_id")
 	private String id;
