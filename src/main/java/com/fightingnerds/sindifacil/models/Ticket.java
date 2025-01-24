@@ -1,6 +1,5 @@
 package com.fightingnerds.sindifacil.models;
 
-import com.fightingnerds.sindifacil.enums.TicketKind;
 import com.fightingnerds.sindifacil.enums.TicketStatus;
 import jakarta.persistence.*;
 
@@ -22,8 +21,6 @@ public class Ticket {
 
 	@OneToMany
 	private List<Comment> comments;
-
-	private TicketKind kind;
 
 	private TicketStatus status;
 
