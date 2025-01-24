@@ -20,5 +20,6 @@ public class ProviderReview {
 	private String review;
 
 	@OneToOne(fetch = FetchType.LAZY)
-	private User reviewer;
+	@JoinColumn(name = "reviewer_id", nullable = false)
+	private JointOwner reviewer;
 }
