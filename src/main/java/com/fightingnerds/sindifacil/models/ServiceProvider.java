@@ -18,4 +18,10 @@ public class ServiceProvider extends DateAudit {
 
 	@Column(name = "billing_rate_per_hour")
 	private String billingRatePerHour;
+
+	@Column(name = "description")
+	private String description;
+
+	@Column(name = "experience_in_months")
+	private Long experienceInMonths;
 }
