@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-public class JointOwner extends DateAudit {
+public class JointOwner {
 	@Id
 	@Column(name = "joint_owner_id")
 	private String id;

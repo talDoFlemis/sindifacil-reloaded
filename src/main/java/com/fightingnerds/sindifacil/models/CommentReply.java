@@ -3,7 +3,7 @@ package com.fightingnerds.sindifacil.models;
 import jakarta.persistence.*;
 
 @Entity
-public class CommentReply extends DateAudit {
+public class CommentReply {
 	@Id
 	@Column(name = "comment_id")
 	private Long commentId;

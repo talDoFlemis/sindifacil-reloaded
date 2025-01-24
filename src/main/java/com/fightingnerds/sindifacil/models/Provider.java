@@ -3,7 +3,7 @@ package com.fightingnerds.sindifacil.models;
 import jakarta.persistence.*;
 
 @Entity
-public class Provider extends DateAudit {
+public class Provider {
 	@Id
 	@Column(name = "provider_id")
 	private String id;

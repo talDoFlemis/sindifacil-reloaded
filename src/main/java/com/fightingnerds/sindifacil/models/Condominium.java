@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Getter
-public class Condominium extends DateAudit {
+public class Condominium {
 	@Id
 	private Long id;
 

@@ -3,7 +3,7 @@ package com.fightingnerds.sindifacil.models;
 import jakarta.persistence.*;
 
 @Entity
-public class ProviderReview extends DateAudit {
+public class ProviderReview {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

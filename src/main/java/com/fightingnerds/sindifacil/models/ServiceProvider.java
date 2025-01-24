@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 
 @Entity
-public class ServiceProvider extends DateAudit {
+public class ServiceProvider {
 	@EmbeddedId
 	private ServiceProviderId id;
 
