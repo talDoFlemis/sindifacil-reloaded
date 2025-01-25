@@ -42,6 +42,6 @@ public class TicketController {
 	public void replyToTicketComment(Comment comment, TicketCommentForm ticketCommentForm) {
 	}
 
-	public void ArchiveTicket(Ticket ticket) {
+	public void archiveTicket(Ticket ticket) {
 	}
 }
