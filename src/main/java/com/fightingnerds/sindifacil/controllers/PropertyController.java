@@ -18,6 +18,10 @@ public class PropertyController {
 		return null;
 	}
 
+	public List<Property> listPropertiesByJointOwner(JointOwner jointOwner) {
+		return null;
+	}
+
 	public void registerProperty(Condominium condominium, PropertyForm propertyForm) {
 	}
 
@@ -25,5 +29,8 @@ public class PropertyController {
 	}
 
 	public void changePropertyOwner(Property property, JointOwner jointOwner) {
+	}
+
+	public void changePropertyJointOwner(Property property, JointOwner jointOwner) {
 	}
 }
