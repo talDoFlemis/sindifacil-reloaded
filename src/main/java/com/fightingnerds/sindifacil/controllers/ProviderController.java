@@ -20,13 +20,4 @@ public class ProviderController {
 
 	public void editProvider(Provider provider, ProviderForm providerForm) {
 	}
-
-	public void addServiceToProvider(Provider provider, Service service, ServiceProviderForm serviceProviderForm) {
-	}
-
-	public void removeServiceFromProvider(ServiceProvider serviceProvider) {
-	}
-
-	public void editServiceForProvider(ServiceProvider serviceProvider, ServiceProviderForm serviceProviderForm) {
-	}
 }
