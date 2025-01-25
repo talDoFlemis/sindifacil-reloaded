@@ -9,4 +9,8 @@ public class AddressForm {
 	private String city;
 
 	private String zipCode;
+
+	private String complement;
+
+	private String neighborhood;
 }

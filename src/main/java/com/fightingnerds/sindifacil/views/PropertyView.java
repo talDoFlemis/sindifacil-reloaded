@@ -1,6 +1,7 @@
 package com.fightingnerds.sindifacil.views;
 
 import com.fightingnerds.sindifacil.controllers.PropertyController;
+import com.fightingnerds.sindifacil.models.Condominium;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -10,6 +11,6 @@ public class PropertyView {
 	public void listAllProperties() {
 	}
 
-	public void listPropertiesByCondominium() {
+	public void listPropertiesByCondominium(Condominium condominium) {
 	}
 }
