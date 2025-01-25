@@ -3,8 +3,9 @@ package com.fightingnerds.sindifacil.controllers;
 import com.fightingnerds.sindifacil.enums.TicketStatus;
 import com.fightingnerds.sindifacil.forms.TicketCommentForm;
 import com.fightingnerds.sindifacil.forms.TicketForm;
+import com.fightingnerds.sindifacil.models.Comment;
+import com.fightingnerds.sindifacil.models.Condominium;
 import com.fightingnerds.sindifacil.models.Ticket;
-import com.fightingnerds.sindifacil.models.User;
 import org.springframework.stereotype.Controller;
 
 import java.util.List;
@@ -19,24 +20,28 @@ public class TicketController {
 		return null;
 	}
 
-	public void addTicket(User user, TicketForm ticketForm) {
+	public List<Ticket> listTicketByCondominium(Condominium condominium) {
+		return null;
 	}
 
-	public void editTicket(User user, Long ticketId, TicketForm ticketForm) {
+	public void addTicket(TicketForm ticketForm) {
 	}
 
-	public void addCommentToTicket(User user, TicketCommentForm ticketCommentForm) {
+	public void editTicket(Ticket ticket, TicketForm ticketForm) {
 	}
 
-	public void editTicketComment(User user, Long ticketCommentId, TicketCommentForm ticketCommentForm) {
+	public void addCommentToTicket(TicketCommentForm ticketCommentForm) {
 	}
 
-	public void likeTicketComment(User user, Long ticketCommentId) {
+	public void editTicketComment(Comment comment, TicketCommentForm ticketCommentForm) {
 	}
 
-	public void replyToTicketComment(User user, Long ticketCommentId, TicketCommentForm ticketCommentForm) {
+	public void likeTicketComment(Comment comment) {
 	}
 
-	public void ArchiveTicket(User user, Long ticketId) {
+	public void replyToTicketComment(Comment comment, TicketCommentForm ticketCommentForm) {
+	}
+
+	public void ArchiveTicket(Ticket ticket) {
 	}
 }
