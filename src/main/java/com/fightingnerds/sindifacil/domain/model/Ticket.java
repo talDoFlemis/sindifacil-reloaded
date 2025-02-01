@@ -1,4 +1,4 @@
-package com.fightingnerds.sindifacil.models;
+package com.fightingnerds.sindifacil.domain.model;
 
 import com.fightingnerds.sindifacil.enums.TicketStatus;
 import jakarta.persistence.*;

@@ -1,11 +1,11 @@
-package com.fightingnerds.sindifacil.models;
+package com.fightingnerds.sindifacil.domain.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class CommentAttachment extends Attachment {
+public class ServiceRequestAttachment extends Attachment {
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Comment comment;
+	private ServiceRequest serviceRequest;
 }

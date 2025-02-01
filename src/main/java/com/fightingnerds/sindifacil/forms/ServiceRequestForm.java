@@ -1,6 +1,6 @@
 package com.fightingnerds.sindifacil.forms;
 
-import com.fightingnerds.sindifacil.models.ServiceRequestAttachment;
+import com.fightingnerds.sindifacil.domain.model.ServiceRequestAttachment;
 import lombok.Getter;
 
 import java.util.Date;

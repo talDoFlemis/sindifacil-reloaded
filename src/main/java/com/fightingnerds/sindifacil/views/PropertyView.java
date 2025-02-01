@@ -1,7 +1,7 @@
 package com.fightingnerds.sindifacil.views;
 
 import com.fightingnerds.sindifacil.controllers.PropertyController;
-import com.fightingnerds.sindifacil.models.Condominium;
+import com.fightingnerds.sindifacil.domain.model.Condominium;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
