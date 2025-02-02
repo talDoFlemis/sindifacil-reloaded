@@ -1,9 +1,9 @@
 package com.fightingnerds.sindifacil.infrastructure.driven.persistence.storer;
 
 import com.fightingnerds.sindifacil.application.port.driven.bankslip.BankSliperStorer;
-import com.fightingnerds.sindifacil.domain.model.JointOwner;
 import com.fightingnerds.sindifacil.domain.model.bankslip.BankSlip;
 import com.fightingnerds.sindifacil.domain.model.bankslip.BankSlipStatus;
+import com.fightingnerds.sindifacil.domain.model.user.JointOwner;
 import com.fightingnerds.sindifacil.infrastructure.driven.persistence.jpa.BankSlipJpaRepository;
 import com.fightingnerds.sindifacil.infrastructure.driven.persistence.mapper.BankSlipPersistenceMapper;
 import lombok.RequiredArgsConstructor;

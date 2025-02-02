@@ -1,8 +1,8 @@
 package com.fightingnerds.sindifacil.infrastructure.driver.web.rest.data.response.property;
 
 import com.fightingnerds.sindifacil.domain.model.Condominium;
-import com.fightingnerds.sindifacil.domain.model.JointOwner;
 import com.fightingnerds.sindifacil.domain.model.address.Address;
+import com.fightingnerds.sindifacil.domain.model.user.JointOwner;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -19,5 +19,5 @@ public class RegisterPropertyResponse {
 	private Condominium condominium;
 
 	@NotNull
-	private JointOwner jointOwner;
+	private JointOwner.JointOwner jointOwner;
 }

@@ -2,7 +2,7 @@ package com.fightingnerds.sindifacil.infrastructure.driven.persistence.storer;
 
 import com.fightingnerds.sindifacil.application.port.driven.property.PropertyStorer;
 import com.fightingnerds.sindifacil.domain.model.Condominium;
-import com.fightingnerds.sindifacil.domain.model.JointOwner;
+import com.fightingnerds.sindifacil.domain.model.user.JointOwner;
 import com.fightingnerds.sindifacil.domain.model.property.Property;
 import com.fightingnerds.sindifacil.infrastructure.driven.persistence.jpa.PropertyJpaRepository;
 import com.fightingnerds.sindifacil.infrastructure.driven.persistence.mapper.PropertyPersistenceMapper;

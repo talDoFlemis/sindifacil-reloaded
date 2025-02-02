@@ -1,6 +1,6 @@
 package com.fightingnerds.sindifacil.domain.model.bankslip;
 
-import com.fightingnerds.sindifacil.domain.model.JointOwner;
+import com.fightingnerds.sindifacil.domain.model.user.JointOwner;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;

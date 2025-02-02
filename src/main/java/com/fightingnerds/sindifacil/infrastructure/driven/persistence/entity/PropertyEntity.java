@@ -2,7 +2,6 @@ package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 
 import com.fightingnerds.sindifacil.domain.model.Condominium;
-import com.fightingnerds.sindifacil.domain.model.JointOwner;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,5 +18,5 @@ public class PropertyEntity {
 	private Condominium condominium;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	private JointOwner jointOwner;
+	private JointOwnerEntity jointOwner;
 }
