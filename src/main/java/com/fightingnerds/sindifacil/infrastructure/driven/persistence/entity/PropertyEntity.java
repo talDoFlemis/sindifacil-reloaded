@@ -1,17 +1,19 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
-import com.fightingnerds.sindifacil.domain.model.address.Address;
+
+import com.fightingnerds.sindifacil.domain.model.Condominium;
+import com.fightingnerds.sindifacil.domain.model.JointOwner;
 import jakarta.persistence.*;
 
 @Entity
-public class Property {
+public class PropertyEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "address_id")
-	private Address address;
+	private AddressEntity address;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Condominium condominium;
