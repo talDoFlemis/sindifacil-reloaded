@@ -5,7 +5,7 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @Data
-public class CreateAddressResponse {
+public class AddressResponse {
 	private Long id;
 	private String street;
 	private String city;

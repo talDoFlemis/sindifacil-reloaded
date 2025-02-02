@@ -1,12 +1,13 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
-import com.fightingnerds.sindifacil.enums.BankSlipStatus;
+import com.fightingnerds.sindifacil.domain.model.JointOwner;
+import com.fightingnerds.sindifacil.domain.model.bankslip.BankSlipStatus;
 import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
-public class BankSlip {
+public class BankSlipEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
