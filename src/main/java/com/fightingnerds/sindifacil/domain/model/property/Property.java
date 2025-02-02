@@ -1,7 +1,7 @@
 package com.fightingnerds.sindifacil.domain.model.property;
 
-import com.fightingnerds.sindifacil.domain.model.Condominium;
 import com.fightingnerds.sindifacil.domain.model.address.Address;
+import com.fightingnerds.sindifacil.domain.model.condominium.Condominium;
 import com.fightingnerds.sindifacil.domain.model.user.JointOwner;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

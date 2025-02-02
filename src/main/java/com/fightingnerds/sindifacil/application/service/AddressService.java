@@ -22,7 +22,7 @@ public class AddressService implements CreateAddressUseCase, GetAddressUseCase, 
 	public Address createAddress(@Valid Address address) {
 		log.debug("Creating address: {}", address);
 
-		address =  addressStorer.storeAddress(address);
+		address =  addressStorer.store(address);
 
 		log.info("Address created: {}", address);
 		return address;
@@ -30,7 +30,7 @@ public class AddressService implements CreateAddressUseCase, GetAddressUseCase, 
 
 	@Override
 	public Address getAddress(final Long id) {
-		return addressStorer.getAddress(id).orElseThrow(() -> {
+		return addressStorer.getById(id).orElseThrow(() -> {
 			log.info("Address not found for id {}", id);
 			return new AddressNotFound(id);
 		});
@@ -41,7 +41,7 @@ public class AddressService implements CreateAddressUseCase, GetAddressUseCase, 
 	public Address updateAddress(@Valid Address address) {
 		log.debug("Updating address: {}", address);
 
-		Address addressUpdated = addressStorer.storeAddress(address);
+		Address addressUpdated = addressStorer.store(address);
 
 		log.info("Address updated: {}", addressUpdated);
 		return addressUpdated;

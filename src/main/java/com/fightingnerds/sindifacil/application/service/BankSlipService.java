@@ -21,17 +21,17 @@ public class BankSlipService implements GetAllBankSlipsByJointOwnerUseCase, GetA
 	private final BankSliperStorer bankSliperStorer;
 
 	@Override
-	public List<BankSlip> getAllByJointOwner(JointOwner.JointOwner jointOwner) {
+	public List<BankSlip> getAllByJointOwner(JointOwner jointOwner) {
 		return List.of();
 	}
 
 	@Override
-	public List<BankSlip> getAllByJointOwnerAndStatus(JointOwner.JointOwner jointOwner, BankSlipStatus status) {
+	public List<BankSlip> getAllByJointOwnerAndStatus(JointOwner jointOwner, BankSlipStatus status) {
 		return List.of();
 	}
 
 	@Override
-	public BankSlip create(@Valid BankSlip bankSlip, @Valid JointOwner.JointOwner jointOwner) {
+	public BankSlip create(@Valid BankSlip bankSlip, @Valid JointOwner jointOwner) {
 		return null;
 	}
 }

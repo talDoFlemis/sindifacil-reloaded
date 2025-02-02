@@ -5,7 +5,7 @@ import com.fightingnerds.sindifacil.application.port.driver.property.ChangePrope
 import com.fightingnerds.sindifacil.application.port.driver.property.GetAllProperties;
 import com.fightingnerds.sindifacil.application.port.driver.property.GetPropertiesByCondominium;
 import com.fightingnerds.sindifacil.application.port.driver.property.RegisterProperty;
-import com.fightingnerds.sindifacil.domain.model.Condominium;
+import com.fightingnerds.sindifacil.domain.model.condominium.Condominium;
 import com.fightingnerds.sindifacil.domain.model.user.JointOwner;
 import com.fightingnerds.sindifacil.domain.model.property.Property;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ public class PropertyService implements GetPropertiesByCondominium, GetAllProper
 	private PropertyStorer propertyStorer;
 
 	@Override
-	public Property changePropertyJointOwner(Property property, JointOwner.JointOwner jointOwner) {
+	public Property changePropertyJointOwner(Property property, JointOwner jointOwner) {
 		return null;
 	}
 
