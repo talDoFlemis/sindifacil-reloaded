@@ -4,12 +4,38 @@ spring:
 
   application:
     name: sindifacil
+    version: 1.0.0
 
   web:
     resources:
       add-mappings: true
 
+  security:
+    oauth2:
+      client:
+        registration:
+          someprovider:
+            client-id: provider
+            client-secret: secret
+            scope:
+              - openid
+              - profile
+              - email
+            client-authentication-method: none
+            authorizationGrantType: authorization_code
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+        provider:
+          someprovider:
+            issuer-uri: https://auth.myprovider.com
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: https://auth.myprovider.com
+
 server:
+  port: 8080
+
   servlet:
     encoding:
       force: true
+    context-path: /
