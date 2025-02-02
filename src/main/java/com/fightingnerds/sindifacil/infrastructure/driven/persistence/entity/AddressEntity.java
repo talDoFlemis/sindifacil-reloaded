@@ -1,9 +1,15 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-public class Address {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class AddressEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
