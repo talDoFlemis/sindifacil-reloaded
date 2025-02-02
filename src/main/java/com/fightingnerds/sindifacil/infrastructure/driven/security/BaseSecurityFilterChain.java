@@ -2,6 +2,7 @@ package com.fightingnerds.sindifacil.infrastructure.driven.security;
 
 
 import com.fightingnerds.sindifacil.infrastructure.driven.security.zitadel.ZitadelGrantedAuthoritiesMapper;
+import com.fightingnerds.sindifacil.infrastructure.driven.security.zitadel.ZitadelOAuth2UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +23,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @RequiredArgsConstructor
 public class BaseSecurityFilterChain {
 	private final ClientRegistrationRepository clientRegistrationRepository;
+	private final ZitadelOAuth2UserService zitadelOAuth2UserService;
 
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -37,7 +39,7 @@ public class BaseSecurityFilterChain {
 		// OAuth2
 		http
 			.oauth2Login(login -> login
-				.userInfoEndpoint(userInfo -> userInfo.userAuthoritiesMapper(this.userAuthoritiesMapper())))
+				.userInfoEndpoint(userInfo -> userInfo.userAuthoritiesMapper(this.userAuthoritiesMapper()).userService(zitadelOAuth2UserService)))
 			.oauth2ResourceServer(conf -> conf.jwt(withDefaults()))
 			.logout(logout -> logout.logoutSuccessHandler(this.oidcLogoutSuccessHandler()));
 
