@@ -3,7 +3,7 @@ package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
+@Entity(name = "addresses")
 @Getter
 @Setter
 @AllArgsConstructor

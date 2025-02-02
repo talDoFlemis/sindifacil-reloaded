@@ -19,7 +19,7 @@ public class AddressStorerImpl implements AddressStorer {
 	private final AddressPersistenceMapper addressPersistenceMapper;
 
 	@Override
-	public Address storeAddress(final Address address) {
+	public Address store(final Address address) {
 		try {
 			AddressEntity addressEntity = addressPersistenceMapper.toEntity(address);
 			addressEntity = addressRepository.save(addressEntity);
@@ -31,7 +31,7 @@ public class AddressStorerImpl implements AddressStorer {
 	}
 
 	@Override
-	public Optional<Address> getAddress(final Long id) {
+	public Optional<Address> getById(final Long id) {
 		return addressRepository.findById(id)
 			.map(addressPersistenceMapper::toDomain);
 	}

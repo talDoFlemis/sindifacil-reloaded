@@ -5,7 +5,5 @@ import com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity.Add
 import org.mapstruct.Mapper;
 
 @Mapper
-public interface AddressPersistenceMapper {
-	AddressEntity toEntity(Address address);
-	Address toDomain(AddressEntity addressEntity);
+public interface AddressPersistenceMapper extends PersistenceMapper<AddressEntity, Address> {
 }
