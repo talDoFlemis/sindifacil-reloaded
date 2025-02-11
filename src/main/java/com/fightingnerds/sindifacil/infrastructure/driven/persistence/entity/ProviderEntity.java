@@ -1,10 +1,9 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
-import com.fightingnerds.sindifacil.domain.model.address.Address;
 import jakarta.persistence.*;
 
 @Entity
-public class Provider {
+public class ProviderEntity {
 	@Id
 	@Column(name = "provider_id")
 	private String id;
@@ -12,8 +11,8 @@ public class Provider {
 	@MapsId
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "provider_id")
-	private User user;
+	private UserEntity user;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	private Address officeAddress;
+	private AddressEntity officeAddress;
 }
