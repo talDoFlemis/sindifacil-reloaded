@@ -1,4 +1,4 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
 
@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class Attachment {
+public abstract class AttachmentEntity {
 	@Id
 	private String key;
 
