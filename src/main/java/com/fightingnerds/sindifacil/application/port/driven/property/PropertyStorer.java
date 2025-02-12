@@ -1,6 +1,7 @@
 package com.fightingnerds.sindifacil.application.port.driven.property;
 
 import com.fightingnerds.sindifacil.application.port.driven.Storer;
+import com.fightingnerds.sindifacil.domain.model.condominium.Condominium;
 import com.fightingnerds.sindifacil.domain.model.user.JointOwner;
 import com.fightingnerds.sindifacil.domain.model.property.Property;
 

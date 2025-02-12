@@ -1,4 +1,4 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.domain.model.comment;
 
 import jakarta.persistence.*;
 

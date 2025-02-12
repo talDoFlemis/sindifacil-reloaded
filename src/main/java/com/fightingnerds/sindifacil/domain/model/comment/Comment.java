@@ -1,5 +1,6 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.domain.model.comment;
 
+import com.fightingnerds.sindifacil.domain.model.user.User;
 import jakarta.persistence.*;
 
 import java.util.List;

@@ -1,11 +1,15 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.domain.model.ticket;
 
+import com.fightingnerds.sindifacil.domain.model.comment.Comment;
+import com.fightingnerds.sindifacil.domain.model.user.User;
 import com.fightingnerds.sindifacil.enums.TicketStatus;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.List;
 
 @Entity
+@Data
 public class Ticket {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
