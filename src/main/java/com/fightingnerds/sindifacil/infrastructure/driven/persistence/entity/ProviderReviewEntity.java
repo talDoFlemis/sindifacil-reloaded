@@ -1,15 +1,15 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-public class ProviderReview {
+public class ProviderReviewEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Provider provider;
+	private ProviderEntity provider;
 
 	private Float punctuality;
 
@@ -21,5 +21,5 @@ public class ProviderReview {
 
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "reviewer_id", nullable = false)
-	private JointOwner reviewer;
+	private UserEntity reviewer;
 }
