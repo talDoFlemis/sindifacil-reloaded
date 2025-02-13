@@ -1,5 +1,6 @@
 package com.fightingnerds.sindifacil.domain.model;
 
+import com.fightingnerds.sindifacil.domain.model.service.Service;
 import jakarta.persistence.*;
 
 

@@ -1,7 +1,6 @@
 package com.fightingnerds.sindifacil.controllers;
 
 import com.fightingnerds.sindifacil.forms.ServiceForm;
-import com.fightingnerds.sindifacil.models.ServiceCategory;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
