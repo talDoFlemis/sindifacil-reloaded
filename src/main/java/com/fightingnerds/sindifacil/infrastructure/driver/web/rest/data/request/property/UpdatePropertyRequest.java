@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-@Builder
 @Data
 public class UpdatePropertyRequest {
 	@NotNull

@@ -10,7 +10,6 @@ import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@Builder
 @AllArgsConstructor
 public class JointOwner extends User {
 	private List<Property> properties;
