@@ -1,6 +1,5 @@
 package com.fightingnerds.sindifacil.domain.model.ticket;
 
-import com.fightingnerds.sindifacil.domain.model.comment.Comment;
 import com.fightingnerds.sindifacil.domain.model.user.User;
 import com.fightingnerds.sindifacil.enums.TicketStatus;
 import jakarta.persistence.*;

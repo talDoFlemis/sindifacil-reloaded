@@ -1,9 +1,9 @@
-package com.fightingnerds.sindifacil.domain.model.comment;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
 
-@Entity
-public class CommentReply {
+@Entity(name = "comment_replies")
+public class CommentReplyEntity {
 	@Id
 	@Column(name = "comment_id")
 	private Long commentId;
@@ -11,8 +11,8 @@ public class CommentReply {
 	@MapsId
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "comment_id", nullable = false)
-	private Comment comment;
+	private CommentEntity comment;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Comment commentReplied;
+	private CommentEntity commentReplied;
 }
