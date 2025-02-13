@@ -2,6 +2,7 @@ package com.fightingnerds.sindifacil.application.service;
 
 import com.fightingnerds.sindifacil.application.port.driven.newsletter.CondominiumNewsletterEventPublisher;
 import com.fightingnerds.sindifacil.application.port.driven.newsletter.GlobalNewsletterEventPublisher;
+import com.fightingnerds.sindifacil.application.port.driven.newsletter.NewsletterStorer;
 import com.fightingnerds.sindifacil.application.port.driver.newsletter.*;
 import com.fightingnerds.sindifacil.domain.model.condominium.Condominium;
 import com.fightingnerds.sindifacil.domain.model.newsletter.Newsletter;
@@ -18,6 +19,7 @@ import java.util.List;
 public class NewsletterService implements  GetAllNewsletterByCondominium, GetAllNewsletterByCategory, CreateNewsletterUseCase {
 	private final GlobalNewsletterEventPublisher globalNewsletterEventPublisher;
 	private final CondominiumNewsletterEventPublisher condominiumNewsletterEventPublisher;
+	private final NewsletterStorer newsletterStorer;
 
 	@Override
 	public Newsletter create(Newsletter newsletter) {
