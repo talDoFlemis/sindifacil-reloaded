@@ -2,11 +2,12 @@ package com.fightingnerds.sindifacil.domain.model.attachment;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.SuperBuilder;
 
 import java.util.Date;
 
 @Data
-@Builder
+@SuperBuilder
 public abstract class Attachment {
 	private String key;
 	private String fileName;
