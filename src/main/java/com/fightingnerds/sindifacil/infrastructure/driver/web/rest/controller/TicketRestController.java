@@ -51,8 +51,8 @@ public class TicketRestController {
     @PutMapping("{id}")
     public ResponseEntity<TicketResponse> updateTicket(@PathVariable Long id, @RequestBody @Valid CreateTicketRequest createTicketRequest) {
         Ticket ticket = this.ticketRestMapper.toDomain(createTicketRequest);
-        ticket.setId(id);
         ticket = ticketService.updateTicket(ticket);
+        ticket.setId(id);
         return new ResponseEntity<>(this.ticketRestMapper.toCreateTicketResponse(ticket), HttpStatus.OK);
     }
 }

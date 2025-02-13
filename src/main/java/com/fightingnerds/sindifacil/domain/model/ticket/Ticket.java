@@ -10,6 +10,7 @@ import java.util.List;
 
 @Data
 public class Ticket {
+	private Long id;
 	private User creator;
 
 	private String title;
