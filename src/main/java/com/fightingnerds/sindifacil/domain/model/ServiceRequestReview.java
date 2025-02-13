@@ -1,5 +1,7 @@
 package com.fightingnerds.sindifacil.domain.model;
 
+import com.fightingnerds.sindifacil.domain.model.servicerequest.ServiceRequest;
+
 import jakarta.persistence.*;
 
 @Entity

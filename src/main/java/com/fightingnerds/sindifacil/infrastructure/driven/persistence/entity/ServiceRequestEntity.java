@@ -1,4 +1,4 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import com.fightingnerds.sindifacil.domain.model.provider.Provider;
 import com.fightingnerds.sindifacil.domain.model.ticket.Ticket;
@@ -7,9 +7,10 @@ import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-@Entity
-public class ServiceRequest {
+@Entity(name = "service_requests")
+public class ServiceRequestEntity {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@OneToOne(fetch = FetchType.LAZY)
@@ -36,5 +37,5 @@ public class ServiceRequest {
 		cascade = CascadeType.ALL,
 		orphanRemoval = true
 	)
-	private List<ServiceRequestAttachment> attachments;
+	private List<ServiceRequestAttachmentEntity> attachments;
 }
