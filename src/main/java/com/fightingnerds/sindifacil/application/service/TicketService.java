@@ -1,5 +1,6 @@
 package com.fightingnerds.sindifacil.application.service;
 
+import com.fightingnerds.sindifacil.application.port.driven.ticket.TicketAttachmentStorer;
 import com.fightingnerds.sindifacil.application.port.driven.ticket.TicketStorer;
 import com.fightingnerds.sindifacil.application.port.driver.ticket.*;
 import com.fightingnerds.sindifacil.domain.exception.ticket.TicketNotFound;
@@ -18,6 +19,7 @@ import java.util.List;
 @Slf4j
 public class TicketService implements CreateTicketUseCase, GetAllTicketsByStatusUseCase, UpdateTicketUseCase, GetAllTickets, GetTicketUseCase {
     private final TicketStorer ticketStorer;
+    private final TicketAttachmentStorer ticketAttachmentStorer;
 
     @Override
     public Ticket create(@Valid Ticket ticket) {
