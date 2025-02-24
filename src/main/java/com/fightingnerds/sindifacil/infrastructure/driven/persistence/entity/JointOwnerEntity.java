@@ -10,7 +10,6 @@ import java.util.UUID;
 public class JointOwnerEntity {
 	@Id
 	@Column(name = "joint_owner_id")
-	@JdbcTypeCode(java.sql.Types.VARCHAR)
 	private UUID id;
 
 	@MapsId

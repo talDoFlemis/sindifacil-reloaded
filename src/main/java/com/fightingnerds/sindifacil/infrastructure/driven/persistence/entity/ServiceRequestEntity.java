@@ -15,11 +15,11 @@ public class ServiceRequestEntity {
 
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "service_provider_id", nullable = false)
-	private Provider provider;
+	private ProviderEntity provider;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "ticket_id", nullable = false)
-	private Ticket ticket;
+	private TicketEntity ticket;
 
 	@Column(name = "hours_worked")
 	private Long hoursWorked;

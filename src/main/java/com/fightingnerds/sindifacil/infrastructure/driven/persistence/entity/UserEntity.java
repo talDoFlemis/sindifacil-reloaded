@@ -9,7 +9,6 @@ import java.util.UUID;
 @Entity(name = "users")
 public class UserEntity {
 	@Id
-	@JdbcTypeCode(java.sql.Types.VARCHAR)
 	private UUID id;
 
 	@OneToMany

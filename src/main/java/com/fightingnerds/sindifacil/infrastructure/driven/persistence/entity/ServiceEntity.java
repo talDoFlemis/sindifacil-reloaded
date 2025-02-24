@@ -12,5 +12,5 @@ public class ServiceEntity {
 	private String name;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	private ServiceCategory category;
+	private ServiceCategoryEntity category;
 }
