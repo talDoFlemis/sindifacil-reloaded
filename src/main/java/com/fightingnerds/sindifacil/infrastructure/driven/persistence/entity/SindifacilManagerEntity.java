@@ -2,17 +2,14 @@ package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
 
-@Entity(name = "providers")
-public class ProviderEntity {
+@Entity(name = "sindifacil_managers")
+public class SindifacilManagerEntity {
 	@Id
-	@Column(name = "provider_id")
+	@Column(name = "user_id")
 	private String id;
 
 	@MapsId
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "provider_id")
+	@JoinColumn(name = "user_id")
 	private UserEntity user;
-
-	@OneToOne(cascade = CascadeType.ALL)
-	private AddressEntity officeAddress;
 }

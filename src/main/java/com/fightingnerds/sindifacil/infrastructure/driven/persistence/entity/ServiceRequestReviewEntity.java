@@ -1,21 +1,19 @@
-package com.fightingnerds.sindifacil.domain.model;
-
-import com.fightingnerds.sindifacil.domain.model.servicerequest.ServiceRequest;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
 
-@Entity
-public class ServiceRequestReview {
+@Entity(name = "service_request_reviews")
+public class ServiceRequestReviewEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	private ServiceRequest serviceRequest;
+	private ServiceRequestEntity serviceRequest;
 
 	@OneToOne
 	@JoinColumn(name = "reviewer_id", nullable = false)
-	private JointOwner reviewer;
+	private JointOwnerEntity reviewer;
 
 	@Column(name = "rating", nullable = false)
 	private Long rating;

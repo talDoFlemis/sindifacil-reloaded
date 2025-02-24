@@ -3,7 +3,7 @@ package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "properties")
 public class PropertyEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

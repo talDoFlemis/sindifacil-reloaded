@@ -3,7 +3,7 @@ package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 import com.fightingnerds.sindifacil.domain.model.newsletter.NewsletterCategory;
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "newsletters")
 public class NewsletterEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

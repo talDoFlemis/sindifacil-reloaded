@@ -6,7 +6,7 @@ import org.hibernate.annotations.JdbcTypeCode;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
+@Entity(name = "joint_owners")
 public class JointOwnerEntity {
 	@Id
 	@Column(name = "joint_owner_id")

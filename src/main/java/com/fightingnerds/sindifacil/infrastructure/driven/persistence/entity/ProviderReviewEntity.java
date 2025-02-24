@@ -2,7 +2,7 @@ package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "provider_reviews")
 public class ProviderReviewEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

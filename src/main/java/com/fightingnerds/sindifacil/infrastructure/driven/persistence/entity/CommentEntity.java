@@ -22,4 +22,7 @@ public class CommentEntity {
 
 	@OneToMany(mappedBy = "commentReplied", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<CommentReplyEntity> replies;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	private TicketEntity ticket;
 }

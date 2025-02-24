@@ -1,6 +1,6 @@
 package com.fightingnerds.sindifacil.domain.model.condominium;
 
-import com.fightingnerds.sindifacil.domain.model.Syndic;
+import com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity.SyndicEntity;
 import com.fightingnerds.sindifacil.domain.model.address.Address;
 import com.fightingnerds.sindifacil.domain.model.property.Property;
 import jakarta.validation.constraints.NotBlank;
@@ -18,7 +18,7 @@ public class Condominium {
 	@NotBlank
 	private String name;
 	private List<Property> properties;
-	private Syndic syndic;
+	private SyndicEntity syndic;
 	@NotBlank
 	private Address address;
 }

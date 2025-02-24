@@ -1,12 +1,11 @@
 package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
-import com.fightingnerds.sindifacil.domain.model.Syndic;
 import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.util.List;
 
-@Entity
+@Entity(name = "condominiums")
 @Getter
 public class CondominiumEntity {
 	@Id
@@ -22,7 +21,7 @@ public class CondominiumEntity {
 
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "cpf")
-	private Syndic syndic;
+	private SyndicEntity syndic;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "address_id", nullable = false)

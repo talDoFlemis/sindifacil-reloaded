@@ -1,7 +1,7 @@
 package com.fightingnerds.sindifacil.infrastructure.driven.persistence.storer;
 
 import com.fightingnerds.sindifacil.application.port.driven.condominium.CondominiumStorer;
-import com.fightingnerds.sindifacil.domain.model.Syndic;
+import com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity.SyndicEntity;
 import com.fightingnerds.sindifacil.domain.model.condominium.Condominium;
 import com.fightingnerds.sindifacil.infrastructure.driven.persistence.jpa.CondominiumJpaRepository;
 import com.fightingnerds.sindifacil.infrastructure.driven.persistence.mapper.CondominiumPersistenceMapper;
@@ -34,7 +34,7 @@ public class CondominiumStorerImpl implements CondominiumStorer {
 	}
 
 	@Override
-	public Condominium changeSyndic(Condominium condominium, Syndic syndic) {
+	public Condominium changeSyndic(Condominium condominium, SyndicEntity syndic) {
 		return null;
 	}
 

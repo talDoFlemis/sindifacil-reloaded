@@ -3,6 +3,8 @@ package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity(name = "ticket")
 @Getter
 @Setter
@@ -10,13 +12,12 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class TicketEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "creator")
-    private String creator;
+    @OneToOne(fetch = FetchType.LAZY)
+    private UserEntity creator;
 
     @Column(name = "title")
     private String title;
@@ -24,12 +25,6 @@ public class TicketEntity {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "comments")
-    private String comments;
-
     @Column(name = "status")
     private String status;
-
-    @Column(name = "attachments")
-    private String attachments;
 }

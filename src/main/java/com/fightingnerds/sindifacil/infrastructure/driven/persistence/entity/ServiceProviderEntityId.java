@@ -1,9 +1,9 @@
 package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.Embeddable;
 
-@Entity(name = "service_provider")
+@Embeddable
 public class ServiceProviderEntityId {
     
 	@Column(name = "service_id")

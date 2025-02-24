@@ -1,9 +1,9 @@
-package com.fightingnerds.sindifacil.domain.model;
+package com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity;
 
 import jakarta.persistence.*;
 
-@Entity
-public class Syndic {
+@Entity(name = "syndics")
+public class SyndicEntity {
 	@Id
 	@Column(name = "syndic_id")
 	private String id;
@@ -11,9 +11,9 @@ public class Syndic {
 	@MapsId
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "syndic_id")
-	private User user;
+	private UserEntity user;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "condominium_id")
-	private Condominium condominium;
+	private CondominiumEntity condominium;
 }

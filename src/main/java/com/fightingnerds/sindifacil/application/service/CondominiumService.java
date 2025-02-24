@@ -5,7 +5,7 @@ import com.fightingnerds.sindifacil.application.port.driver.condominium.ChangeCo
 import com.fightingnerds.sindifacil.application.port.driver.condominium.CreateCondominiumUseCase;
 import com.fightingnerds.sindifacil.application.port.driver.condominium.GetAllCondominiumUseCase;
 import com.fightingnerds.sindifacil.application.port.driver.condominium.UpdateCondominiumUseCase;
-import com.fightingnerds.sindifacil.domain.model.Syndic;
+import com.fightingnerds.sindifacil.infrastructure.driven.persistence.entity.SyndicEntity;
 import com.fightingnerds.sindifacil.domain.model.condominium.Condominium;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -35,7 +35,7 @@ public class CondominiumService implements ChangeCondominiumSyndicUseCase, Creat
 	}
 
 	@Override
-	public Condominium changeSyndic(Condominium condominium, Syndic syndic) {
+	public Condominium changeSyndic(Condominium condominium, SyndicEntity syndic) {
 		return null;
 	}
 }
